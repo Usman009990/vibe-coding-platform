@@ -4,6 +4,7 @@ import { CommandLogsStream } from '@/components/commands-logs/commands-logs-stre
 import { ErrorMonitor } from '@/components/error-monitor/error-monitor'
 import { SandboxState } from '@/components/modals/sandbox-state'
 import { Toaster } from '@/components/ui/sonner'
+import { Analytics } from '@vercel/analytics/next'
 import type { ReactNode } from 'react'
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
@@ -48,6 +49,7 @@ export default function RootLayout({
         <Toaster />
         <CommandLogsStream />
         <SandboxState />
+        <Analytics />
       </body>
     </html>
   )
